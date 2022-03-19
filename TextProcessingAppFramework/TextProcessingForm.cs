@@ -43,6 +43,9 @@ namespace TextProcessingApp
         {
             SearchTextBox.Text = DictionaryTable.CurrentCell.Value.ToString();
         }
+        /// <summary>
+        /// Set Windows Form to a default state
+        /// </summary>
         private void resetWorkSpace()
         {
             SearchTextBox.Text = string.Empty;

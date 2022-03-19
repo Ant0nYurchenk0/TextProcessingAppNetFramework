@@ -72,7 +72,7 @@ namespace TextProcessingApp
             // 
             this.FilePathLabel.AutoSize = true;
             this.FilePathLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic);
-            this.FilePathLabel.Location = new System.Drawing.Point(130, 14);
+            this.FilePathLabel.Location = new System.Drawing.Point(175, 22);
             this.FilePathLabel.Name = "FilePathLabel";
             this.FilePathLabel.Size = new System.Drawing.Size(0, 25);
             this.FilePathLabel.TabIndex = 2;
