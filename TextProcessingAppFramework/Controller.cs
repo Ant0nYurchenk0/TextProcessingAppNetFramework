@@ -42,6 +42,7 @@ namespace TextProcessingApp
                 dictionaryTable.Rows[dictionaryTable.RowCount - 1].Cells[0].Value = word.Key;  
                 dictionaryTable.Rows[dictionaryTable.RowCount - 1].Cells[1].Value = word.Value.Count;  
             }
+            numerateRows(dictionaryTable);
         }
         /// <summary>
         ///out list of positions to the table
@@ -59,6 +60,7 @@ namespace TextProcessingApp
                     repetitionsTable.Rows[repetitionsTable.RowCount - 1].Cells[0].Value = position.Line.ToString();
                     repetitionsTable.Rows[repetitionsTable.RowCount - 1].Cells[1].Value = position.Word.ToString();
                 }
+                numerateRows(repetitionsTable);
             }
             else
             {
@@ -99,6 +101,16 @@ namespace TextProcessingApp
             {
                 Global.WordDictionary.Add(keyWord, new List<Position>());
                 Global.WordDictionary[keyWord].Add(new Position(line + 1, word + 1));
+            }
+        }
+        /// <summary>
+        /// enumarate each row of a table
+        /// </summary>
+        private static void numerateRows(DataGridView table)
+        {
+            foreach(DataGridViewRow row in table.Rows)
+            {
+                row.HeaderCell.Value = (row.Index + 1).ToString();
             }
         }
     }

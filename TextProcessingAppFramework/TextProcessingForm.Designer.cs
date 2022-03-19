@@ -47,13 +47,13 @@ namespace TextProcessingApp
             this.DictionaryTable.AllowUserToAddRows = false;
             this.DictionaryTable.BackgroundColor = System.Drawing.Color.Lavender;
             this.DictionaryTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DictionaryTable.Location = new System.Drawing.Point(11, 66);
+            this.DictionaryTable.Location = new System.Drawing.Point(12, 66);
             this.DictionaryTable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DictionaryTable.Name = "DictionaryTable";
             this.DictionaryTable.ReadOnly = true;
             this.DictionaryTable.RowHeadersWidth = 62;
             this.DictionaryTable.RowTemplate.Height = 33;
-            this.DictionaryTable.Size = new System.Drawing.Size(397, 486);
+            this.DictionaryTable.Size = new System.Drawing.Size(421, 486);
             this.DictionaryTable.TabIndex = 0;
             this.DictionaryTable.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DictionaryTable_CellDoubleClick);
             // 
@@ -80,7 +80,7 @@ namespace TextProcessingApp
             // FindWordLabel
             // 
             this.FindWordLabel.AutoSize = true;
-            this.FindWordLabel.Location = new System.Drawing.Point(414, 73);
+            this.FindWordLabel.Location = new System.Drawing.Point(450, 78);
             this.FindWordLabel.Name = "FindWordLabel";
             this.FindWordLabel.Size = new System.Drawing.Size(126, 20);
             this.FindWordLabel.TabIndex = 3;
@@ -90,7 +90,7 @@ namespace TextProcessingApp
             // 
             this.SearchTextBox.Enabled = false;
             this.SearchTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.SearchTextBox.Location = new System.Drawing.Point(535, 70);
+            this.SearchTextBox.Location = new System.Drawing.Point(571, 75);
             this.SearchTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SearchTextBox.Name = "SearchTextBox";
             this.SearchTextBox.Size = new System.Drawing.Size(218, 26);
@@ -100,7 +100,7 @@ namespace TextProcessingApp
             // SearchButton
             // 
             this.SearchButton.Enabled = false;
-            this.SearchButton.Location = new System.Drawing.Point(759, 66);
+            this.SearchButton.Location = new System.Drawing.Point(795, 71);
             this.SearchButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SearchButton.Name = "SearchButton";
             this.SearchButton.Size = new System.Drawing.Size(94, 35);
@@ -114,13 +114,13 @@ namespace TextProcessingApp
             this.RepetitionsTable.AllowUserToAddRows = false;
             this.RepetitionsTable.BackgroundColor = System.Drawing.Color.Lavender;
             this.RepetitionsTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.RepetitionsTable.Location = new System.Drawing.Point(457, 115);
+            this.RepetitionsTable.Location = new System.Drawing.Point(470, 115);
             this.RepetitionsTable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.RepetitionsTable.Name = "RepetitionsTable";
             this.RepetitionsTable.ReadOnly = true;
             this.RepetitionsTable.RowHeadersWidth = 62;
             this.RepetitionsTable.RowTemplate.Height = 33;
-            this.RepetitionsTable.Size = new System.Drawing.Size(396, 437);
+            this.RepetitionsTable.Size = new System.Drawing.Size(422, 437);
             this.RepetitionsTable.TabIndex = 6;
             // 
             // TextProcessingForm
@@ -128,7 +128,7 @@ namespace TextProcessingApp
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Thistle;
-            this.ClientSize = new System.Drawing.Size(865, 563);
+            this.ClientSize = new System.Drawing.Size(905, 563);
             this.Controls.Add(this.RepetitionsTable);
             this.Controls.Add(this.SearchButton);
             this.Controls.Add(this.SearchTextBox);
