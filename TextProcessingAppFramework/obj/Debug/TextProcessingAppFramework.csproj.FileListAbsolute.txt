@@ -1,0 +1,11 @@
+D:\Docs\C#\TextProcessingAppFramework\TextProcessingAppFramework\obj\Debug\TextProcessingAppFramework.csproj.AssemblyReference.cache
+D:\Docs\C#\TextProcessingAppFramework\TextProcessingAppFramework\obj\Debug\TextProcessingAppFramework.csproj.SuggestedBindingRedirects.cache
+D:\Docs\C#\TextProcessingAppFramework\TextProcessingAppFramework\obj\Debug\TextProcessingAppFramework.Properties.Resources.resources
+D:\Docs\C#\TextProcessingAppFramework\TextProcessingAppFramework\obj\Debug\TextProcessingAppFramework.csproj.GenerateResource.cache
+D:\Docs\C#\TextProcessingAppFramework\TextProcessingAppFramework\obj\Debug\TextProcessingAppFramework.csproj.CoreCompileInputs.cache
+D:\Docs\C#\TextProcessingAppFramework\TextProcessingAppFramework\bin\Debug\TextProcessingAppFramework.exe.config
+D:\Docs\C#\TextProcessingAppFramework\TextProcessingAppFramework\bin\Debug\TextProcessingAppFramework.exe
+D:\Docs\C#\TextProcessingAppFramework\TextProcessingAppFramework\bin\Debug\TextProcessingAppFramework.pdb
+D:\Docs\C#\TextProcessingAppFramework\TextProcessingAppFramework\obj\Debug\TextProcessingAppFramework.exe
+D:\Docs\C#\TextProcessingAppFramework\TextProcessingAppFramework\obj\Debug\TextProcessingAppFramework.pdb
+D:\Docs\C#\TextProcessingAppFramework\TextProcessingAppFramework\obj\Debug\TextProcessingApp.TextProcessingForm.resources

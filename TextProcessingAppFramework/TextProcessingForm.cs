@@ -1,0 +1,58 @@
+using System;
+using System.Windows.Forms;
+
+namespace TextProcessingApp
+{
+    public partial class TextProcessingForm : Form
+    {
+        public TextProcessingForm()
+        {
+            InitializeComponent();
+            OpenTxtFile.Filter = Global.FileFilters;
+            resetWorkSpace();
+        }
+
+        private void OpenFileButton_Click(object sender, EventArgs e)
+        {
+            resetWorkSpace();
+            if (OpenTxtFile.ShowDialog() == DialogResult.OK)
+            {
+                Controller.ParseFile(OpenTxtFile.FileName);
+                Controller.ShowDictionary(DictionaryTable);
+                FilePathLabel.Text = OpenTxtFile.FileName;
+                SearchButton.Enabled = true;
+                SearchTextBox.Enabled = true;
+            }
+        }
+
+        private void SearchButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                RepetitionsTable.Rows.Clear();
+                RepetitionsTable.Columns.Clear();
+                RepetitionsTable.Refresh();
+                Controller.ShowRepetitions(SearchTextBox.Text, RepetitionsTable);
+            }
+            catch (Exception ex)
+            {
+                SearchTextBox.Text = ex.Message;
+            }
+        }
+        private void DictionaryTable_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            SearchTextBox.Text = DictionaryTable.CurrentCell.Value.ToString();
+        }
+        private void resetWorkSpace()
+        {
+            SearchTextBox.Text = string.Empty;
+            FilePathLabel.Text = string.Empty;
+            SearchButton.Enabled = false;
+            SearchTextBox.Enabled = false;
+            SearchTextBox.Text = Global.DoubleClick;
+            Controller.ResetTable(DictionaryTable);
+            Controller.ResetTable(RepetitionsTable);
+            Global.WordDictionary.Clear();
+        }
+    }
+}
