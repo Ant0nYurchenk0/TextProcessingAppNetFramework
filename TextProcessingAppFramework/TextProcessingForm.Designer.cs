@@ -80,7 +80,7 @@ namespace TextProcessingApp
             // FindWordLabel
             // 
             this.FindWordLabel.AutoSize = true;
-            this.FindWordLabel.Location = new System.Drawing.Point(420, 73);
+            this.FindWordLabel.Location = new System.Drawing.Point(414, 73);
             this.FindWordLabel.Name = "FindWordLabel";
             this.FindWordLabel.Size = new System.Drawing.Size(126, 20);
             this.FindWordLabel.TabIndex = 3;
@@ -90,10 +90,10 @@ namespace TextProcessingApp
             // 
             this.SearchTextBox.Enabled = false;
             this.SearchTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.SearchTextBox.Location = new System.Drawing.Point(552, 70);
+            this.SearchTextBox.Location = new System.Drawing.Point(535, 70);
             this.SearchTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SearchTextBox.Name = "SearchTextBox";
-            this.SearchTextBox.Size = new System.Drawing.Size(201, 26);
+            this.SearchTextBox.Size = new System.Drawing.Size(218, 26);
             this.SearchTextBox.TabIndex = 4;
             this.SearchTextBox.Text = "Double-click word to copy";
             // 
