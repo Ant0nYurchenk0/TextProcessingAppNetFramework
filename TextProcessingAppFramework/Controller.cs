@@ -33,8 +33,8 @@ namespace TextProcessingApp
         internal static void ShowDictionary(DataGridView dictionaryTable)
         {
             // adding two columns for word and count
-            dictionaryTable.Columns.Add(new DataGridViewTextBoxColumn{Name = "Word"});
-            dictionaryTable.Columns.Add(new DataGridViewTextBoxColumn{Name = "Frequency"});
+            dictionaryTable.Columns.Add(new DataGridViewTextBoxColumn{Name = Global.WORD_COLUMN});
+            dictionaryTable.Columns.Add(new DataGridViewTextBoxColumn{Name = Global.FREQUENCY_COLUMN});
             
             foreach (var word in Global.WordDictionary)
             {
@@ -52,8 +52,8 @@ namespace TextProcessingApp
             if (Global.WordDictionary.TryGetValue(word, out var positionList))
             {
                 // adding two columns for line and word order in a line
-                repetitionsTable.Columns.Add(new DataGridViewTextBoxColumn{Name = "Line"});
-                repetitionsTable.Columns.Add(new DataGridViewTextBoxColumn{Name = "Word No."});
+                repetitionsTable.Columns.Add(new DataGridViewTextBoxColumn{Name = Global.LINE_COLUMN});
+                repetitionsTable.Columns.Add(new DataGridViewTextBoxColumn{Name = Global.WORD_NUM_COLUMN});
                 foreach (var position in positionList)
                 {
                     repetitionsTable.Rows.Add(new DataGridViewRow());

@@ -41,7 +41,8 @@ namespace TextProcessingApp
         }
         private void DictionaryTable_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            SearchTextBox.Text = DictionaryTable.CurrentCell.Value.ToString();
+            if (DictionaryTable.CurrentCell.OwningColumn.HeaderText == Global.WORD_COLUMN)
+                SearchTextBox.Text = DictionaryTable.CurrentCell.Value.ToString();
         }
         /// <summary>
         /// Set Windows Form to a default state
