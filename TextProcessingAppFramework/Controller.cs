@@ -13,14 +13,14 @@ namespace TextProcessingApp
         /// </summary>
         internal static void ParseFile(string path)
         {
-            var lineList = File.ReadAllLines(path).Where(line => line != string.Empty).ToList();
-            for(int line = 0; line < lineList.Count; line++)
+            var lineList = File.ReadAllLines(path).Where(line => !string.IsNullOrEmpty(line)).ToList();
+            for(var line = 0; line < lineList.Count; line++)
             {
-                lineList[line] = removeChars(lineList[line]);
-                var wordList = lineList[line].Split(' ').Where(word => word != string.Empty).ToList();
-                for(int word = 0; word < wordList.Count; word++)
+                lineList[line] = RemoveChars(lineList[line]);
+                var wordList = lineList[line].Split(' ').Where(word => !string.IsNullOrEmpty(word)).ToList();
+                for(var word = 0; word < wordList.Count; word++)
                 {
-                    insertPosition(wordList[word].ToLower(), line, word);
+                    InsertPosition(wordList[word].ToLower(), line, word);
                 }
             }
             Global.WordDictionary = Global.WordDictionary
@@ -42,7 +42,7 @@ namespace TextProcessingApp
                 dictionaryTable.Rows[dictionaryTable.RowCount - 1].Cells[0].Value = word.Key;  
                 dictionaryTable.Rows[dictionaryTable.RowCount - 1].Cells[1].Value = word.Value.Count;  
             }
-            numerateRows(dictionaryTable);
+            NumerateRows(dictionaryTable);
         }
         /// <summary>
         ///out list of positions to the table
@@ -60,11 +60,11 @@ namespace TextProcessingApp
                     repetitionsTable.Rows[repetitionsTable.RowCount - 1].Cells[0].Value = position.Line.ToString();
                     repetitionsTable.Rows[repetitionsTable.RowCount - 1].Cells[1].Value = position.Word.ToString();
                 }
-                numerateRows(repetitionsTable);
+                NumerateRows(repetitionsTable);
             }
             else
             {
-                throw new Exception(Global.SearchError);
+                throw new Exception(Global.SEARCH_ERROR);
             }
         }
         /// <summary> 
@@ -79,7 +79,7 @@ namespace TextProcessingApp
         /// <summary>
         /// remove redundant chars from a string
         /// </summary>
-        private static string removeChars(string line)
+        private static string RemoveChars(string line)
         {
             foreach (var character in Global.CharsToRemove)
             {
@@ -91,7 +91,7 @@ namespace TextProcessingApp
         /// <summary>
         /// add new position to the list of positions in the dictionary
         /// </summary>
-        private static void insertPosition(string keyWord, int line, int word)
+        private static void InsertPosition(string keyWord, int line, int word)
         {
             if (Global.WordDictionary.TryGetValue(keyWord, out var positionList))
             {
@@ -106,7 +106,7 @@ namespace TextProcessingApp
         /// <summary>
         /// enumarate each row of a table
         /// </summary>
-        private static void numerateRows(DataGridView table)
+        private static void NumerateRows(DataGridView table)
         {
             foreach(DataGridViewRow row in table.Rows)
             {

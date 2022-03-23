@@ -8,7 +8,7 @@ namespace TextProcessingApp
         public TextProcessingForm()
         {
             InitializeComponent();
-            OpenTxtFile.Filter = Global.FileFilters;
+            OpenTxtFile.Filter = Global.FILE_FILTERS;
             resetWorkSpace();
         }
 
@@ -53,7 +53,7 @@ namespace TextProcessingApp
             FilePathLabel.Text = string.Empty;
             SearchButton.Enabled = false;
             SearchTextBox.Enabled = false;
-            SearchTextBox.Text = Global.DoubleClick;
+            SearchTextBox.Text = Global.TEXT_BOX_COPY_HINT;
             Controller.ResetTable(DictionaryTable);
             Controller.ResetTable(RepetitionsTable);
             Global.WordDictionary.Clear();
