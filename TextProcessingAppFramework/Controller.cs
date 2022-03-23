@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace TextProcessingApp
+namespace TextProcessingAppFramework
 {
     internal static class Controller
     {

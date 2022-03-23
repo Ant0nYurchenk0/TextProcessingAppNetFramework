@@ -1,5 +1,5 @@
 ﻿
-namespace TextProcessingApp
+namespace TextProcessingAppFramework
 {
     internal struct Position
     {

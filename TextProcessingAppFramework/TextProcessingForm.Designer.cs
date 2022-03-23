@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace TextProcessingApp
+namespace TextProcessingAppFramework
 {
     partial class TextProcessingForm
     {

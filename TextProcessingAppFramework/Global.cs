@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace TextProcessingApp
+namespace TextProcessingAppFramework
 {
     internal static class Global
     {

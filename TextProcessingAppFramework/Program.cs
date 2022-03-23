@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace TextProcessingApp
+namespace TextProcessingAppFramework
 {
     internal static class Program
     {
